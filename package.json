@@ -1,0 +1,24 @@
+{
+  "name": "gm.dotfiles",
+  "version": "0.0.1",
+  "description": "Meta package to install my favorite npm modules",
+  "main": "index.js",
+  "dependencies": {
+    "optimist": "~0.3.4",
+    "futures": "~2.3.1",
+    "join": "~2.3.1",
+    "http-console": "~0.6.1",
+    "async": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "supervisor": "*",
+    "node-inspector": "*"
+},
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Garbrand van der Molen <garbrand@garbrand.com>",
+  "license": "BSD"
+}

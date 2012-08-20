@@ -1,0 +1,3 @@
+#!/bin/sh
+
+export JIRA_HOME=/Users/GarbrandM/Projects/jira-home

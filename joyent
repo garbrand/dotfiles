@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Setup some variables for Joyent
+
+export SDC_CLI_URL=https://eu-ams-1.api.joyentcloud.com
+export SDC_CLI_ACCOUNT=informaat
+export SDC_CLI_KEY_ID=id_rsa.gm.joyent
+export SDC_CLI_IDENTITY=/Users/GarbrandM/.ssh/id_rsa.gm.joyent
