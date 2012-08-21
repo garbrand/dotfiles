@@ -34,7 +34,7 @@ translate = (error, stdout, stderr) ->
 	list = []
 	( list.push({name: item[0].slice(1,-1), id: item[1].slice(1,-1)}) ) for item in temp
 	
-	# console.log(list)
+	# console.log('translate:', list)
 	format(list)
 	
 	
