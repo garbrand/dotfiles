@@ -62,6 +62,10 @@ help = () ->
 	console.log('vbox ls                List (running) machines')
 	console.log('vbox start <machine>   Start the `machine`')
 	console.log('vbox pause <machine>   Do a savestate of the `machine`')
+	
+	console.log('FYI, these are the available VMs on this machine:\n');
+
+	list();
 
 
 list = (running) ->
