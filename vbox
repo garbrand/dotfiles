@@ -10,11 +10,11 @@
 
 util      = require('util')
 exec      = require('child_process').exec
-arguments = require('optimist').argv
+args      = require('optimist').argv
 join      = require('join').create()
 
-command   = arguments._[0]
-machine   = arguments._[1]
+command   = args._[0]
+machine   = args._[1]
 
 
 puts = (error, stdout, stderr) ->
