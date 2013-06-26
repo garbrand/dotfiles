@@ -12,12 +12,12 @@ hg = () ->
 	# Require libs
 	util      = require('util')
 	exec      = require('child_process').exec
-	arguments = require('optimist').argv
+	args      = require('optimist').argv
 
-	# Meaningful names for arguments
+	# Meaningful names for args
 	# TODO: check in optimist docs if this is the way to do it
-	command   = arguments._[0]
-	argument  = arguments._[1]
+	command   = args._[0]
+	argument  = args._[1]
 
 	root = '/Users/GarbrandM/Projects/Phoenix'
 	modules = {

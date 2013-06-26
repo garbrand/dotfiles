@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Aliases
+alias lls='ls -alh'
+alias foundation='ssh root@37.153.96.178'
+alias nsup='node-supervisor'
+alias jag='ag --ignore node_modules --ignore components'
+alias updatedb='sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist'
+alias nosleep='pmset noidle'
