@@ -82,7 +82,7 @@ start = (machine) ->
 
 	# VBoxManage startvm <machine> --type headless
 	console.log("VM \"#{machine}\" is starting...")
-	exec("VBoxManage startvm #{machine} --type headless", puts)
+	exec("VBoxManage startvm #{machine} --type headless --vrde on", puts)
 
 
 pause = (machine) ->
