@@ -9,6 +9,11 @@
 function syncast {
 	SOURCE="~/Music/iTunes/iTunes Media/Podcasts/"
 	DEST="/Volumes/AUDI MEDIA/Music/Podcasts"
-	
-	rsync -rtvu --progress --delete $SOURCE $DEST
+
+	if [ -d DEST ]
+	then 
+		rsync -rtvu --progress --delete $SOURCE $DEST
+	else
+		echo "Could not find destination directory $DEST"
+	fi
 }
