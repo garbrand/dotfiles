@@ -6,4 +6,9 @@
 # --delete: delete files that are in TARGET but not in SOURCE
 # --progress: show per-file progress
 
-rsync -rtvu --progress --delete ~/Music/iTunes/iTunes\ Media/Podcasts/ /Volumes/AUDI\ MEDIA/Music/Podcasts
+function syncast {
+	SOURCE="~/Music/iTunes/iTunes Media/Podcasts/"
+	DEST="/Volumes/AUDI MEDIA/Music/Podcasts"
+	
+	rsync -rtvu --progress --delete $SOURCE $DEST
+}
