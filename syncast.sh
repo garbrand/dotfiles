@@ -7,12 +7,13 @@
 # --progress: show per-file progress
 
 function syncast {
-	SOURCE="~/Music/iTunes/iTunes Media/Podcasts/"
-	DEST="/Volumes/AUDI MEDIA/Music/Podcasts"
+	SOURCE="/Users/Garbrand/Music/iTunes/iTunes Media/Podcasts/"
+	DEST="/Volumes/AUDI MEDIA/Music/Podcasts/"
 
-	if [ -d DEST ]
+	if [ -d "$DEST" ]
 	then 
-		rsync -rtvu --progress --delete $SOURCE $DEST
+		# rsync -rtvu --progress --delete "$SOURCE "$DEST"
+		rsync -rtvu --progress --delete /Users/Garbrand/Music/iTunes/iTunes\ Media/Podcasts/ /Volumes/AUDI\ MEDIA/Music/Podcasts/
 	else
 		echo "Could not find destination directory $DEST"
 	fi
