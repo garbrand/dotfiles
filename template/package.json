@@ -1,0 +1,21 @@
+{
+  "name": "template",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "BSD",
+  "devDependencies": {
+    "chai": "~1.8.0",
+    "mocha": "~1.13.0",
+    "istanbul": "~0.1.44",
+    "forever": "~0.10.8"
+  },
+  "dependencies": {
+    "browserify-middleware": "~1.18.0",
+    "express": "~3.4.0"
+  }
+}

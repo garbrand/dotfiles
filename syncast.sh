@@ -13,7 +13,8 @@ function syncast {
 	if [ -d "$DEST" ]
 	then 
 		# rsync -rtvu --progress --delete "$SOURCE "$DEST"
-		rsync -rtvu --progress --delete /Users/Garbrand/Music/iTunes/iTunes\ Media/Podcasts/ /Volumes/AUDI\ MEDIA/Music/Podcasts/
+		# rsync -rtvu --progress --delete /Users/Garbrand/Music/iTunes/iTunes\ Media/Podcasts/ /Volumes/AUDI\ MEDIA/Music/Podcasts/
+		rsync -rtvu --progress /Users/Garbrand/Music/iTunes/iTunes\ Media/Podcasts/ /Volumes/AUDI\ MEDIA/Music/Podcasts/
 	else
 		echo "Could not find destination directory $DEST"
 	fi
