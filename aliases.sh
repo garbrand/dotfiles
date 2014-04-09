@@ -9,3 +9,4 @@ alias updatedb='sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.l
 alias nosleep='pmset noidle'
 alias chrome='open -a /Applications/Development/Google\ Chrome.app/ $1'
 alias cower='GIT_SSL_NO_VERIFY=true bower'
+alias sizes='sudo du -xhd 1'
