@@ -5,4 +5,6 @@
 # Then to load mongodb now:
 #     launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
 # Or, if you don't want/need launchctl, you can just run:
-#     mongod
+#     mongod --config /usr/local/etc/mongod.conf
+
+mongod --config /usr/local/etc/mongod.conf &&

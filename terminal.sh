@@ -1,6 +1,7 @@
 #!/bin/sh
 
 function tabname {
+	# directory = ${PWD##*/}
   printf "\e]1;$1\a"
 }
  
