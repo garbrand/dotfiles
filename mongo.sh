@@ -7,5 +7,6 @@
 # Or, if you don't want/need launchctl, you can just run:
 #     mongod --config /usr/local/etc/mongod.conf
 
-# TODO: since all .sh files are sourced, this gets executed:
-# alias gomongo=mongod --config /usr/local/etc/mongod.conf
+function gomongo {
+	mongod --config /usr/local/etc/mongod.conf
+}
