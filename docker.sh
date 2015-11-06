@@ -8,14 +8,9 @@ alias dm=docker-machine
 
 # Set the ENV vars for connecting the Docker host to the Docker client:
 function dm-env {
-	if [ -z "$1" ]; then
-        DOCKERENV=dev
-    else
-        DOCKERENV=$1
-    fi
-
-	eval "$(docker-machine env $DOCKERENV)"
+	eval "$(docker-machine env ${1:-"dev"})"
 }
 
-# Attempt to set docker variables:
-dm-env
+function docker-clean {
+	docker rmi $(docker images -f "dangling=true" -q)
+}
