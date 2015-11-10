@@ -7,17 +7,17 @@ function git_color {
   local git_status="$(git status 2> /dev/null)"
 
   if [[ ! $git_status =~ "working directory clean" ]]; then
-    # echo -e "$_RED"
+    echo -e "$_RED"
     # Red background, white text
-    echo -e "$(tput setab 1)$(tput setaf 7)"
+    # echo -e "$(tput setab 1)$(tput setaf 7)"
   elif [[ $git_status =~ "Your branch is ahead of" ]]; then
-    # echo -e "$_YELLOW"
+    echo -e "$_YELLOW"
     # Yellow background, black text
-    echo -e "$(tput setab 3)$(tput setaf 0)"
+    # echo -e "$(tput setab 3)$(tput setaf 0)"
   elif [[ $git_status =~ "nothing to commit" ]]; then
-    # echo -e "$_GREEN"
+    echo -e "$_GREEN"
     # Green background, white text
-    echo -e "$(tput setab 2)$(tput setaf 0)"
+    # echo -e "$(tput setab 2)$(tput setaf 0)"
   else
     echo -e "$_OCHRE"
   fi
@@ -41,6 +41,12 @@ function git_branch {
 
 PS1="\[$_WHITE\]\n[\W]"          # basename of pwd
 PS1+="\[\$(git_color)\]"        # colors git status
+PS1+="●\[$_RESET\]"
 PS1+="\$(git_branch)"           # prints current branch
 PS1+="\[$_BLUE\]\$\[$_RESET\] "   # '#' for root, else '$'
 export PS1
+
+
+# ●
+# BLACK CIRCLE
+# Unicode: U+25CF, UTF-8: E2 97 8F
