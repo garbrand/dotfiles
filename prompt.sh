@@ -8,15 +8,18 @@ function git_color {
 
   if [[ ! $git_status =~ "working directory clean" ]]; then
     # echo -e "$_RED"
+    # Red background, white text
     echo -e "$(tput setab 1)$(tput setaf 7)"
   elif [[ $git_status =~ "Your branch is ahead of" ]]; then
-    echo -e "$_YELLOW"
+    # echo -e "$_YELLOW"
+    # Yellow background, black text
+    echo -e "$(tput setab 3)$(tput setaf 0)"
   elif [[ $git_status =~ "nothing to commit" ]]; then
     # echo -e "$_GREEN"
+    # Green background, white text
     echo -e "$(tput setab 2)$(tput setaf 0)"
   else
     echo -e "$_OCHRE"
-    # echo -e "$(tput setab 1)$(tput setaf 3)"
   fi
 }
 
