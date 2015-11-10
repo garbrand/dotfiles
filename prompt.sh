@@ -13,10 +13,10 @@ function git_color {
     echo -e "$_YELLOW"
   elif [[ $git_status =~ "nothing to commit" ]]; then
     # echo -e "$_GREEN"
-    echo -e "$(tput setab 2)$(tput setaf 7)"
+    echo -e "$(tput setab 2)$(tput setaf 0)"
   else
-    # echo -e "$_OCHRE"
-    echo -e "$(tput setab 1)$(tput setaf 3)"
+    echo -e "$_OCHRE"
+    # echo -e "$(tput setab 1)$(tput setaf 3)"
   fi
 }
 
