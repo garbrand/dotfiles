@@ -41,7 +41,7 @@ function git_branch {
 
 PS1="\[$_WHITE\]\n[\W]"          # basename of pwd
 PS1+="\[\$(git_color)\]"        # colors git status
-PS1+="●\[$_RESET\]"
+PS1+=" ● \[$_RESET\]"
 PS1+="\$(git_branch)"           # prints current branch
 PS1+="\[$_BLUE\]\$\[$_RESET\] "   # '#' for root, else '$'
 export PS1
