@@ -4,23 +4,50 @@ source ${HOME}/.dotfiles/constants.sh
 
 
 function git_color {
-  local git_status="$(git status 2> /dev/null)"
+    local git_status="$(git status 2> /dev/null)"
 
-  if [[ ! $git_status =~ "working directory clean" ]]; then
-    echo -e "$_RED"
+    if [[ $git_status == *"working directory clean"* ]]; then
+        local git_dirty=true
+    fi
+
+  if [[ $git_status == *"Not a git repository"* ]]; then
+    echo -e "$_GREY"
     # Red background, white text
     # echo -e "$(tput setab 1)$(tput setaf 7)"
-  elif [[ $git_status =~ "Your branch is ahead of" ]]; then
+  elif [[ $git_status == *"Your branch is ahead of"* ]]; then
     echo -e "$_YELLOW"
     # Yellow background, black text
     # echo -e "$(tput setab 3)$(tput setaf 0)"
-  elif [[ $git_status =~ "nothing to commit" ]]; then
+  elif [[ $git_status == *"nothing to commit"* ]]; then
     echo -e "$_GREEN"
     # Green background, white text
     # echo -e "$(tput setab 2)$(tput setaf 0)"
+  # elif [[ ! $git_status == *"working directory clean"* ]]; then
+  #   echo -e "$_RED"
+  elif [[ $git_dirty ]]; then
+    echo -e "$_RED"
   else
-    echo -e "$_OCHRE"
+    echo -e "$_GREY"
   fi
+
+
+  # if [[ $git_status =~ "fatal: Not a git repository" ]]; then
+  #   echo -e "$_GREY"
+  # elif [[ ! $git_status =~ "working directory clean" ]]; then
+  #   echo -e "$_RED"
+  #   # Red background, white text
+  #   # echo -e "$(tput setab 1)$(tput setaf 7)"
+  # elif [[ $git_status =~ "Your branch is ahead of" ]]; then
+  #   echo -e "$_YELLOW"
+  #   # Yellow background, black text
+  #   # echo -e "$(tput setab 3)$(tput setaf 0)"
+  # elif [[ $git_status =~ "nothing to commit" ]]; then
+  #   echo -e "$_GREEN"
+  #   # Green background, white text
+  #   # echo -e "$(tput setab 2)$(tput setaf 0)"
+  # else
+  #   echo -e "$_GREY"
+  # fi
 }
 
 
