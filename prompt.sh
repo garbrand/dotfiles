@@ -6,9 +6,8 @@ source ${HOME}/.dotfiles/constants.sh
 function git_color {
     local git_status="$(git status 2> /dev/null)"
 
-    if [[ $git_status == *"working directory clean"* ]]; then
-        local git_dirty=true
-    fi
+    [[ $git_status == *"working directory clean"* ]] && local git_dirty=true;
+
 
   if [[ $git_status == *"Not a git repository"* ]]; then
     echo -e "$_GREY"
@@ -27,7 +26,8 @@ function git_color {
   elif [[ $git_dirty ]]; then
     echo -e "$_RED"
   else
-    echo -e "$_GREY"
+    # Some other status, for instance files that are not added
+    echo -e "$_YELLOW"
   fi
 
 
@@ -67,7 +67,7 @@ function git_branch {
 
 
 PS1="\[$_WHITE\]\n[\W]"          # basename of pwd
-PS1+="\[\$(git_color)\]"        # colors git status
+PS1+="\$(git_color)"        # colors git status
 PS1+=" ● \[$_RESET\]"
 PS1+="\$(git_branch)"           # prints current branch
 PS1+="\[$_BLUE\]\$\[$_RESET\] "   # '#' for root, else '$'
