@@ -1,5 +1,0 @@
-repo: 634d3c0c78a5b4482163d7d1b64bd0ff89a42c61
-node: b5e971a6924e621c3d7cc70b0979459287bf6c33
-branch: r6s1
-latesttag: build-35
-latesttagdistance: 1
